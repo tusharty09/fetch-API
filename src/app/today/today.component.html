@@ -1,0 +1,24 @@
+<div>
+    <h1>Today's Games</h1>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <table *ngIf="todayGames.length > 0">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Sport Series</th>
+          <th>Match</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let game of todayGames">
+          <td>{{ game.time }}</td>
+          <td>{{ game.seriesname }}</td>
+          <td>
+            {{ game.matchDetails }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="!todayGames.length && !errorMessage">No games available today.</div>
+  </div>
+  

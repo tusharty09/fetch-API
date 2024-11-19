@@ -1,0 +1,9 @@
+<div *ngFor="let game of inPlayGames">
+    <div>
+      <h3>{{ game.matchname }} ({{ game.seriesname }})</h3>
+      <p>Match Type: {{ game.matchType }}</p>
+      <p>Selections: {{ game.selectionnames }}</p>
+      <p>Betfair ID: {{ game.betfairid }}</p>
+      <p>Odds: {{ game.b1 }} / {{ game.b2 }} / {{ game.b3 }}</p>
+    </div>
+  </div>
